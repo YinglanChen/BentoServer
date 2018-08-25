@@ -54,7 +54,7 @@ ROOT_URLCONF = 'bento.urls'
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'BACKEND': 'django.template.backendsm.django.DjangoTemplates',
         'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -80,8 +80,8 @@ DATABASES = {
         'NAME': 'bento_db' ,
         'USER': 'bento',
         'PASSWORD': 'getBento123!',
-        'HOST': '', 
-        'PORT': '',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
