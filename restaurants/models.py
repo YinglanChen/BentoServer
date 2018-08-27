@@ -12,17 +12,28 @@ class Menu(models.Model):
     side = models.CharField(max_length=50)
     price = models.IntegerField()
     deleted = models.BooleanField(default=False)
+    def __str__(self):
+        return self.res_id
 
 class Order(models.Model):
     cus_id = models.CharField(max_length=50)
     pickup_location = models.CharField(max_length=20)
-    menu_id = models.ForeignKey(Menu, on_delete=models.CASCADE)
+    order_id = models.ForeignKey(OrderItem, on_delete=models.CASCADE)
     price = models.IntegerField()
     phone = models.IntegerField()
     def __str__(self):
         return self.cus_id
 
+class OrderItem(models.Model):
+    order_id = models.IntegerField(primary_key=true)
+    menu_id = models.ForeignKey(Menu, on_delte=models.CASCADE)
+    amount - models.IntegerField()
+    def __str__(self):
+        return self.order_id
+
 class TimePlace(models.Model):
     res_id = models.ForeignKey(Restaurant, on_delete=models.CASCADE)
     time = models.CharField(max_length=20)
     place = models.CharField(max_length=20)
+    def __str__(self):
+        return self.res_id
