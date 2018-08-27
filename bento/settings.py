@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'bento.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bento_db' ,
+        'NAME': 'bento_db',
         'USER': 'bento',
         'PASSWORD': 'getBento123!',
         'HOST': 'localhost',
