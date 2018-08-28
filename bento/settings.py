@@ -25,7 +25,7 @@ SECRET_KEY = '+nbph(6%0nc(bwq8^ttmjvq0_@b4lz=m&3y5rusiiy53a35ndb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['118.24.80.83','www.alphalunch.xyz']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
