@@ -18,7 +18,7 @@ class Order(models.Model):
     cus_id = models.CharField(max_length=50)
     location = models.CharField(max_length=30)
     price = models.IntegerField()
-    phone = models.IntegerField()
+    phone = models.CharField(max_length=20)
     datetime = models.DateTimeField(auto_now_add=True)
     deleted = models.BooleanField(default=False)
 
