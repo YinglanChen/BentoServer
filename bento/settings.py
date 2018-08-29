@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'werkzeug_debugger_runserver',
     'django_extensions',
-    'restaurants.apps.RestaurantsConfig',
+    'alphalunch.apps.AlphalunchConfig',
 ]
 
 MIDDLEWARE = [
