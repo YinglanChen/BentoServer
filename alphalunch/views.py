@@ -4,12 +4,6 @@ from .models import *
 from datetime import datetime
 # Create your views here.
 
-
-def foo(request):
-    print(request)
-    return HttpResponse("hello from foo")
-
-
 # Restaurant
 def restaurant_login(request):
     try:
