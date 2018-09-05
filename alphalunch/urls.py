@@ -15,6 +15,7 @@ urlpatterns = [
     path('cus/allorder/', views.lookup_customer_order),
 
     path('general/allmenu/', views.lookup_menu),
+    path('general/alltp/', views.lookup_timeplace),
     path('general/orderdetail/', views.order_detail)
 ]
 

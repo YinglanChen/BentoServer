@@ -146,6 +146,16 @@ def lookup_menu(request):
     return HttpResponse(serializers.serialize('json', menus))
 
 
+def lookup_timeplace(request):
+    try:
+        restaurant_id = int(request.GET['id'])
+        restaurant = Restaurant.objects.get(pk=restaurant_id)
+    except:
+        return HttpResponse('{}')
+    tps = TimePlace.objects.filter(restaurant=restaurant)
+    return HttpResponse(serializers.serialize('json', tps))
+
+
 def order_detail(request):
     try:
         order_id = int(request.GET['id'])
