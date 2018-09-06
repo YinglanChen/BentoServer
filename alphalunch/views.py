@@ -29,7 +29,7 @@ def add_menu(request):
     menu.side = side
     menu.price = price
     menu.save()
-    return HttpResponse("Success")
+    return HttpResponse(menu.pk)
 
 
 def delete_menu(request):
