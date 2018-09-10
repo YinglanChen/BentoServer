@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.core import serializers
 from .models import *
 from datetime import datetime
+import ast
 # Create your views here.
 
 # Restaurant
@@ -50,10 +51,11 @@ def update_timeplace(request):
     try:
         restaurant_id = int(request.GET['rid'])
         restaurant = Restaurant.objects.get(pk=restaurant_id)
-        tplist = request.GET.getlist('tp')
+        tpstr = request.GET.get('tp')
     except:
         return HttpResponse('Invalid Parameter')
     TimePlace.objects.filter(restaurant=restaurant).delete()
+    tplist = ast.literal_eval(tpstr)
     for tp in tplist:
         elems = tp.split(',')
         obj = TimePlace()
